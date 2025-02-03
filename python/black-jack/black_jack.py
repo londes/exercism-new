@@ -74,7 +74,8 @@ def is_blackjack(card_one, card_two):
     2.  'A' (ace card) = 11 (if already in hand)
     3.  '2' - '10' = numerical value.
     """
-    if value_of_card(card_one) + value_of_card(card_two) == 21:
+
+    if (card_one == 'A' or card_two == 'A') and (value_of_card(card_one) == 10 or value_of_card(card_two) == 10):
         return True
     else:
         return False
